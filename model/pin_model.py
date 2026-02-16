@@ -5,7 +5,7 @@ class PinModel:
     def __init__(self):
         self.current_mode = "Auto"
 
-        self.rut_pin_status = {1: False, 2: False, 3: False, 4: False, 5: False}
+        self.replace_pin_status = {1: False, 2: False, 3: False, 4: False, 5: False}
 
         self.pin_data = {
             1: {"percent": 92, "voltage": 51.8, "temp": 33.2, "status": "Đang sạc nhanh"},
@@ -23,7 +23,7 @@ class PinModel:
         ]
 
     def update_pin(self, pin):
-        if self.rut_pin_status[pin]:
+        if self.replace_pin_status[pin]:
             return
         data = self.pin_data[pin]
         data["percent"] = max(0, min(100, data["percent"] + random.randint(-5, 5)))
@@ -42,7 +42,7 @@ class PinModel:
     def get_random_status_and_icon(self):
         return random.choice(self.status_options)
 
-    def rut_pin(self, pin):
-        self.rut_pin_status[pin] = True
+    def replace_pin(self, pin):
+        self.replace_pin_status[pin] = True
         self.pin_data[pin]["percent"] = 0
         self.pin_data[pin]["status"] = "Đã rút"

@@ -28,11 +28,11 @@ class MainController(QtWidgets.QMainWindow):
 
             btn_name = f"replace_button_{i}" if i < 6 else "replace_button_5"  # theo tên mới của bạn
             btn = getattr(self.ui, btn_name)
-            btn.clicked.connect(lambda _, p=i: self.rut_pin(p))
+            btn.clicked.connect(lambda _, p=i: self.replace_pin(p))
 
         # Update lần đầu
         self.update_all()
-        self.update_rut_pin_buttons_visibility()
+        self.update_replace_pin_buttons_visibility()
 
     def update_all(self):
         for pin in range(1, 6):
@@ -41,7 +41,7 @@ class MainController(QtWidgets.QMainWindow):
         self.update_general_status()
 
     def update_pin_ui(self, pin):
-        if self.model.rut_pin_status[pin]:
+        if self.model.replace_pin_status[pin]:
             return
 
         data = self.model.pin_data[pin]
@@ -82,7 +82,7 @@ class MainController(QtWidgets.QMainWindow):
 
         self.ui.status_value.setStyleSheet(f"border: none; border-radius: 0px; color: {color};")
 
-    def update_rut_pin_buttons_visibility(self):
+    def update_replace_pin_buttons_visibility(self):
         visible = (self.model.current_mode == "Manual")
         self.ui.replace_button_1.setVisible(visible)
         self.ui.replace_button_2.setVisible(visible)
@@ -177,7 +177,7 @@ class MainController(QtWidgets.QMainWindow):
                 self.model.current_mode = "Manual"
 
             self.ui.mode_value.setText(self.model.current_mode)
-            self.update_rut_pin_buttons_visibility()
+            self.update_replace_pin_buttons_visibility()
 
             ssid = ui_setting.lineEdit.text().strip()
             password = ui_setting.lineEdit_2.text().strip()
@@ -190,7 +190,7 @@ class MainController(QtWidgets.QMainWindow):
         ui_setting.pushButton.clicked.connect(save_settings)
         dialog.exec_()
 
-    def rut_pin(self, pin_number):
+    def replace_pin(self, pin_number):
         reply = QtWidgets.QMessageBox.question(
             self, "Xác nhận rút pin",
             f"Bạn có chắc chắn muốn rút Pin {pin_number} không?",
@@ -199,7 +199,7 @@ class MainController(QtWidgets.QMainWindow):
         )
 
         if reply == QtWidgets.QMessageBox.Yes:
-            self.model.rut_pin(pin_number)
+            self.model.replace_pin(pin_number)
             self.update_pin_ui(pin_number)
             self.update_pin_card_style(pin_number, is_rut=True)
             QtWidgets.QMessageBox.information(self, "Thành công", f"Pin {pin_number} đã được rút!")
