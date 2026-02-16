@@ -2,10 +2,10 @@
 import sys
 import random
 from PyQt5 import QtWidgets, QtCore
-from main_ui import Ui_MainWindow               # Màn hình chính
-from pin_detail import Ui_Dialog_pin            # Dialog chi tiết pin
-from ui_setting import Ui_Dialog_setting        # Dialog Setting
-
+from ui_gen.main_ui import Ui_MainWindow  # Màn hình chính
+from ui_gen.pin_detail import Ui_Dialog_pin  # Dialog chi tiết pin
+from ui_gen.ui_setting import Ui_Dialog_setting       # Dialog Setting       
+from data_update.pin_management.pin_update import PinManager
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
@@ -16,27 +16,7 @@ class MainWindow(QtWidgets.QMainWindow):
         # Biến lưu chế độ hoạt động
         self.current_mode = "Auto"
         self.ui.mode_value.setText(self.current_mode)
-
-        # Theo dõi pin đã rút
-        self.rut_pin_status = {1: False, 2: False, 3: False, 4: False, 5: False}
-
-        # Dữ liệu mô phỏng 5 pin
-        self.pin_data = {
-            1: {"percent": 92, "voltage": 51.8, "temp": 33.2, "status": "Đang sạc nhanh"},
-            2: {"percent": 67, "voltage": 50.4, "temp": 35.1, "status": "Đang sạc"},
-            3: {"percent": 45, "voltage": 49.1, "temp": 37.8, "status": "Ngừng sạc"},
-            4: {"percent": 88, "voltage": 51.5, "temp": 32.4, "status": "Đang sạc"},
-            5: {"percent": 23, "voltage": 48.3, "temp": 39.5, "status": "Cảnh báo thấp"}
-        }
-
-        # Trạng thái tổng + icon robot
-        self.status_options = [
-            ("IDLE", "🤖💤"),
-            ("WAITING", "🤖⌛"),
-            ("BUSY", "🤖🔄"),
-            ("DONE", "🤖🎉")
-        ]
-
+        self.pin_manager = PinManager()
         # Timer update pin mỗi 4 giây
         self.timer = QtCore.QTimer(self)
         self.timer.timeout.connect(self.update_all_pins)
@@ -46,10 +26,10 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.button_setting.clicked.connect(self.open_setting_dialog)
 
         self.ui.frame_pin_1.mousePressEvent = lambda e: self.open_pin_detail(1)
-        self.ui.frame_pin_2.mousePressEvent = lambda e: self.open_pin_detail(2)
+        self.ui.frame_pin_5.mousePressEvent = lambda e: self.open_pin_detail(2)
         self.ui.frame_pin_3.mousePressEvent = lambda e: self.open_pin_detail(3)
-        self.ui.frame_pin_4.mousePressEvent = lambda e: self.open_pin_detail(4)
-        self.ui.frame_pin_5.mousePressEvent = lambda e: self.open_pin_detail(5)
+        self.ui.frame_pin_2.mousePressEvent = lambda e: self.open_pin_detail(4)
+        self.ui.frame_pin_4.mousePressEvent = lambda e: self.open_pin_detail(5)
 
         self.ui.pushButton.clicked.connect(lambda: self.rut_pin(1))
         self.ui.pushButton_2.clicked.connect(lambda: self.rut_pin(2))
@@ -116,28 +96,17 @@ class MainWindow(QtWidgets.QMainWindow):
             status_label.setStyleSheet(label_style)
 
     def update_all_pins(self):
-        for pin in range(1, 6):
-            if self.rut_pin_status[pin]:
-                continue  # Pin đã rút → không update
+        self.pin_manager.update_all_pins()
 
-            data = self.pin_data[pin]
-            data["percent"] = max(0, min(100, data["percent"] + random.randint(-5, 5)))
-            data["voltage"] = round(random.uniform(47.0, 52.0), 1)
-            data["temp"] = round(random.uniform(30.0, 43.0), 1)
-
-            if data["percent"] >= 80:
-                data["status"] = "Đang sạc nhanh"
-            elif data["percent"] >= 40:
-                data["status"] = "Đang sạc"
-            elif data["percent"] >= 20:
-                data["status"] = "Sạc chậm"
-            else:
-                data["status"] = "Pin yếu"
-
+        for pin, data in self.pin_manager.pin_data.items():
+            if self.pin_manager.rut_pin_status[pin]:
+                continue
             self.update_pin_ui(pin, data)
 
+        self.update_general_status()
+
     def update_pin_ui(self, pin, data):
-        if self.rut_pin_status[pin]:
+        if self.pin_manager.rut_pin_status[pin]:
             return
 
         progress = getattr(self.ui, f"progressBar_pin_{pin}_n")
@@ -163,7 +132,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.update_pin_card_style(pin, is_rut=False)
 
     def update_general_status(self):
-        status_text, icon = random.choice(self.status_options)
+        status_text, icon = self.pin_manager.get_general_status()
+
         self.ui.status_value.setText(status_text)
         self.ui.general_status_icon.setText(icon)
 
@@ -176,7 +146,8 @@ class MainWindow(QtWidgets.QMainWindow):
         else:
             color = "#455A64"
 
-        self.ui.status_value.setStyleSheet(f"border: none; border-radius: 0px; color: {color};")
+        self.ui.status_value.setStyleSheet(f"color: {color}; border: none;")
+
 
     def open_pin_detail(self, pin_number):
         dialog = QtWidgets.QDialog(self)
@@ -184,8 +155,8 @@ class MainWindow(QtWidgets.QMainWindow):
         ui_dialog.setupUi(dialog)
 
         ui_dialog.label.setText(f"PIN {pin_number} - Thông số chi tiết")
-
-        data = self.pin_data[pin_number]
+        #ui_dialog.label.setText(f"Thông số chi tiết")
+        data = self.pin_manager.pin_data[pin_number]
         table = ui_dialog.tableWidget
         table.setRowCount(0)
         table.setRowCount(19)
@@ -263,30 +234,17 @@ class MainWindow(QtWidgets.QMainWindow):
         )
 
         if reply == QtWidgets.QMessageBox.Yes:
-            self.pin_data[pin_number]["percent"] = 0
-            self.pin_data[pin_number]["status"] = "Đã rút"
-            self.rut_pin_status[pin_number] = True
-            self.update_pin_ui(pin_number, self.pin_data[pin_number])
+            self.pin_manager.rut_pin(pin_number)
+
+            data = self.pin_manager.pin_data[pin_number]
+            self.update_pin_ui(pin_number, data)
             self.update_pin_card_style(pin_number, is_rut=True)
-            QtWidgets.QMessageBox.information(self, "Thành công", f"Pin {pin_number} đã được rút thành công!")
-        else:
-            QtWidgets.QMessageBox.information(self, "Hủy", "Hủy rút pin.")
 
-    def update_general_status(self):
-        status_text, icon = random.choice(self.status_options)
-        self.ui.status_value.setText(status_text)
-        self.ui.general_status_icon.setText(icon)
+            QtWidgets.QMessageBox.information(
+                self, "Thành công", f"Pin {pin_number} đã được rút thành công!"
+            )
 
-        if status_text in ["IDLE", "DONE"]:
-            color = "#4CAF50"
-        elif status_text == "WAITING":
-            color = "#FF9800"
-        elif status_text == "BUSY":
-            color = "#F44336"
-        else:
-            color = "#455A64"
 
-        self.ui.status_value.setStyleSheet(f"border: none; border-radius: 0px; color: {color};")
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
