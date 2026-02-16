@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'main_ui_qt.ui'
+# Form implementation generated from reading ui file 'ui/main_ui_qt.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -289,8 +289,8 @@ class Ui_MainWindow(object):
 "    border-radius: 0px;")
         self.label_208.setObjectName("label_208")
         self.horizontalLayout_4.addWidget(self.frame_pin_1)
-        self.frame_pin_5 = QtWidgets.QFrame(self.horizontalLayoutWidget)
-        self.frame_pin_5.setStyleSheet("border: 3px solid #81D4FA;\n"
+        self.frame_pin_2 = QtWidgets.QFrame(self.horizontalLayoutWidget)
+        self.frame_pin_2.setStyleSheet("border: 3px solid #81D4FA;\n"
 "border-radius: 10px;\n"
 "background-color: #f8f9fa;\n"
 "\n"
@@ -298,10 +298,10 @@ class Ui_MainWindow(object):
 "    border: none;\n"
 "    border-radius: 0px;\n"
 "}")
-        self.frame_pin_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_pin_5.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_pin_5.setObjectName("frame_pin_5")
-        self.label_195 = QtWidgets.QLabel(self.frame_pin_5)
+        self.frame_pin_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_pin_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_pin_2.setObjectName("frame_pin_2")
+        self.label_195 = QtWidgets.QLabel(self.frame_pin_2)
         self.label_195.setGeometry(QtCore.QRect(70, 10, 41, 51))
         font = QtGui.QFont()
         font.setPointSize(32)
@@ -309,12 +309,12 @@ class Ui_MainWindow(object):
         self.label_195.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_195.setObjectName("label_195")
-        self.label_196 = QtWidgets.QLabel(self.frame_pin_5)
+        self.label_196 = QtWidgets.QLabel(self.frame_pin_2)
         self.label_196.setGeometry(QtCore.QRect(70, 70, 51, 17))
         self.label_196.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_196.setObjectName("label_196")
-        self.progressBar_pin_2_n = QtWidgets.QProgressBar(self.frame_pin_5)
+        self.progressBar_pin_2_n = QtWidgets.QProgressBar(self.frame_pin_2)
         self.progressBar_pin_2_n.setGeometry(QtCore.QRect(20, 100, 141, 31))
         font = QtGui.QFont()
         font.setBold(True)
@@ -340,7 +340,7 @@ class Ui_MainWindow(object):
         self.progressBar_pin_2_n.setProperty("value", 24)
         self.progressBar_pin_2_n.setTextVisible(False)
         self.progressBar_pin_2_n.setObjectName("progressBar_pin_2_n")
-        self.label_197 = QtWidgets.QLabel(self.frame_pin_5)
+        self.label_197 = QtWidgets.QLabel(self.frame_pin_2)
         self.label_197.setGeometry(QtCore.QRect(20, 160, 61, 17))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -348,7 +348,7 @@ class Ui_MainWindow(object):
         self.label_197.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_197.setObjectName("label_197")
-        self.label_198 = QtWidgets.QLabel(self.frame_pin_5)
+        self.label_198 = QtWidgets.QLabel(self.frame_pin_2)
         self.label_198.setGeometry(QtCore.QRect(20, 180, 81, 17))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -356,7 +356,7 @@ class Ui_MainWindow(object):
         self.label_198.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_198.setObjectName("label_198")
-        self.label_199 = QtWidgets.QLabel(self.frame_pin_5)
+        self.label_199 = QtWidgets.QLabel(self.frame_pin_2)
         self.label_199.setGeometry(QtCore.QRect(20, 200, 81, 17))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -364,7 +364,7 @@ class Ui_MainWindow(object):
         self.label_199.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_199.setObjectName("label_199")
-        self.pin_2_vol_value_n = QtWidgets.QLabel(self.frame_pin_5)
+        self.pin_2_vol_value_n = QtWidgets.QLabel(self.frame_pin_2)
         self.pin_2_vol_value_n.setGeometry(QtCore.QRect(100, 160, 31, 17))
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -374,7 +374,7 @@ class Ui_MainWindow(object):
         self.pin_2_vol_value_n.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.pin_2_vol_value_n.setObjectName("pin_2_vol_value_n")
-        self.pin_2_temp_value_n = QtWidgets.QLabel(self.frame_pin_5)
+        self.pin_2_temp_value_n = QtWidgets.QLabel(self.frame_pin_2)
         self.pin_2_temp_value_n.setGeometry(QtCore.QRect(100, 180, 31, 17))
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -384,7 +384,7 @@ class Ui_MainWindow(object):
         self.pin_2_temp_value_n.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.pin_2_temp_value_n.setObjectName("pin_2_temp_value_n")
-        self.pin_2_status_value_n = QtWidgets.QLabel(self.frame_pin_5)
+        self.pin_2_status_value_n = QtWidgets.QLabel(self.frame_pin_2)
         self.pin_2_status_value_n.setGeometry(QtCore.QRect(100, 200, 61, 17))
         font = QtGui.QFont()
         font.setPointSize(9)
@@ -394,7 +394,7 @@ class Ui_MainWindow(object):
         self.pin_2_status_value_n.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.pin_2_status_value_n.setObjectName("pin_2_status_value_n")
-        self.label_200 = QtWidgets.QLabel(self.frame_pin_5)
+        self.label_200 = QtWidgets.QLabel(self.frame_pin_2)
         self.label_200.setGeometry(QtCore.QRect(130, 160, 21, 17))
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -402,12 +402,12 @@ class Ui_MainWindow(object):
         self.label_200.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_200.setObjectName("label_200")
-        self.label_201 = QtWidgets.QLabel(self.frame_pin_5)
+        self.label_201 = QtWidgets.QLabel(self.frame_pin_2)
         self.label_201.setGeometry(QtCore.QRect(130, 180, 21, 17))
         self.label_201.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_201.setObjectName("label_201")
-        self.horizontalLayout_4.addWidget(self.frame_pin_5)
+        self.horizontalLayout_4.addWidget(self.frame_pin_2)
         self.frame_pin_3 = QtWidgets.QFrame(self.horizontalLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -533,8 +533,8 @@ class Ui_MainWindow(object):
 "    border-radius: 0px;")
         self.label_187.setObjectName("label_187")
         self.horizontalLayout_4.addWidget(self.frame_pin_3)
-        self.frame_pin_2 = QtWidgets.QFrame(self.horizontalLayoutWidget)
-        self.frame_pin_2.setStyleSheet("border: 3px solid #81D4FA;\n"
+        self.frame_pin_4 = QtWidgets.QFrame(self.horizontalLayoutWidget)
+        self.frame_pin_4.setStyleSheet("border: 3px solid #81D4FA;\n"
 "border-radius: 10px;\n"
 "background-color: #f8f9fa;\n"
 "\n"
@@ -542,10 +542,10 @@ class Ui_MainWindow(object):
 "    border: none;\n"
 "    border-radius: 0px;\n"
 "}")
-        self.frame_pin_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_pin_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_pin_2.setObjectName("frame_pin_2")
-        self.label_188 = QtWidgets.QLabel(self.frame_pin_2)
+        self.frame_pin_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_pin_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_pin_4.setObjectName("frame_pin_4")
+        self.label_188 = QtWidgets.QLabel(self.frame_pin_4)
         self.label_188.setGeometry(QtCore.QRect(70, 10, 41, 51))
         font = QtGui.QFont()
         font.setPointSize(32)
@@ -553,12 +553,12 @@ class Ui_MainWindow(object):
         self.label_188.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_188.setObjectName("label_188")
-        self.label_189 = QtWidgets.QLabel(self.frame_pin_2)
+        self.label_189 = QtWidgets.QLabel(self.frame_pin_4)
         self.label_189.setGeometry(QtCore.QRect(70, 70, 51, 17))
         self.label_189.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_189.setObjectName("label_189")
-        self.progressBar_pin_4_n = QtWidgets.QProgressBar(self.frame_pin_2)
+        self.progressBar_pin_4_n = QtWidgets.QProgressBar(self.frame_pin_4)
         self.progressBar_pin_4_n.setGeometry(QtCore.QRect(20, 100, 141, 31))
         font = QtGui.QFont()
         font.setBold(True)
@@ -584,7 +584,7 @@ class Ui_MainWindow(object):
         self.progressBar_pin_4_n.setProperty("value", 24)
         self.progressBar_pin_4_n.setTextVisible(False)
         self.progressBar_pin_4_n.setObjectName("progressBar_pin_4_n")
-        self.label_190 = QtWidgets.QLabel(self.frame_pin_2)
+        self.label_190 = QtWidgets.QLabel(self.frame_pin_4)
         self.label_190.setGeometry(QtCore.QRect(20, 160, 61, 17))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -592,7 +592,7 @@ class Ui_MainWindow(object):
         self.label_190.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_190.setObjectName("label_190")
-        self.label_191 = QtWidgets.QLabel(self.frame_pin_2)
+        self.label_191 = QtWidgets.QLabel(self.frame_pin_4)
         self.label_191.setGeometry(QtCore.QRect(20, 180, 81, 17))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -600,7 +600,7 @@ class Ui_MainWindow(object):
         self.label_191.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_191.setObjectName("label_191")
-        self.label_192 = QtWidgets.QLabel(self.frame_pin_2)
+        self.label_192 = QtWidgets.QLabel(self.frame_pin_4)
         self.label_192.setGeometry(QtCore.QRect(20, 200, 81, 17))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -608,7 +608,7 @@ class Ui_MainWindow(object):
         self.label_192.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_192.setObjectName("label_192")
-        self.pin_4_vol_value_n = QtWidgets.QLabel(self.frame_pin_2)
+        self.pin_4_vol_value_n = QtWidgets.QLabel(self.frame_pin_4)
         self.pin_4_vol_value_n.setGeometry(QtCore.QRect(100, 160, 31, 17))
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -618,7 +618,7 @@ class Ui_MainWindow(object):
         self.pin_4_vol_value_n.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.pin_4_vol_value_n.setObjectName("pin_4_vol_value_n")
-        self.pin_4_temp_value_n = QtWidgets.QLabel(self.frame_pin_2)
+        self.pin_4_temp_value_n = QtWidgets.QLabel(self.frame_pin_4)
         self.pin_4_temp_value_n.setGeometry(QtCore.QRect(100, 180, 31, 17))
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -628,7 +628,7 @@ class Ui_MainWindow(object):
         self.pin_4_temp_value_n.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.pin_4_temp_value_n.setObjectName("pin_4_temp_value_n")
-        self.pin_4_status_value_n = QtWidgets.QLabel(self.frame_pin_2)
+        self.pin_4_status_value_n = QtWidgets.QLabel(self.frame_pin_4)
         self.pin_4_status_value_n.setGeometry(QtCore.QRect(100, 200, 61, 17))
         font = QtGui.QFont()
         font.setPointSize(9)
@@ -638,7 +638,7 @@ class Ui_MainWindow(object):
         self.pin_4_status_value_n.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.pin_4_status_value_n.setObjectName("pin_4_status_value_n")
-        self.label_193 = QtWidgets.QLabel(self.frame_pin_2)
+        self.label_193 = QtWidgets.QLabel(self.frame_pin_4)
         self.label_193.setGeometry(QtCore.QRect(130, 160, 21, 17))
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -646,7 +646,7 @@ class Ui_MainWindow(object):
         self.label_193.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_193.setObjectName("label_193")
-        self.label_194 = QtWidgets.QLabel(self.frame_pin_2)
+        self.label_194 = QtWidgets.QLabel(self.frame_pin_4)
         self.label_194.setGeometry(QtCore.QRect(130, 180, 21, 17))
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -654,9 +654,9 @@ class Ui_MainWindow(object):
         self.label_194.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_194.setObjectName("label_194")
-        self.horizontalLayout_4.addWidget(self.frame_pin_2)
-        self.frame_pin_4 = QtWidgets.QFrame(self.horizontalLayoutWidget)
-        self.frame_pin_4.setStyleSheet("border: 3px solid #81D4FA;\n"
+        self.horizontalLayout_4.addWidget(self.frame_pin_4)
+        self.frame_pin_5 = QtWidgets.QFrame(self.horizontalLayoutWidget)
+        self.frame_pin_5.setStyleSheet("border: 3px solid #81D4FA;\n"
 "border-radius: 10px;\n"
 "background-color: #f8f9fa;\n"
 "\n"
@@ -664,10 +664,10 @@ class Ui_MainWindow(object):
 "    border: none;\n"
 "    border-radius: 0px;\n"
 "}")
-        self.frame_pin_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_pin_4.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_pin_4.setObjectName("frame_pin_4")
-        self.label_209 = QtWidgets.QLabel(self.frame_pin_4)
+        self.frame_pin_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_pin_5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_pin_5.setObjectName("frame_pin_5")
+        self.label_209 = QtWidgets.QLabel(self.frame_pin_5)
         self.label_209.setGeometry(QtCore.QRect(70, 10, 41, 51))
         font = QtGui.QFont()
         font.setPointSize(32)
@@ -675,12 +675,12 @@ class Ui_MainWindow(object):
         self.label_209.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_209.setObjectName("label_209")
-        self.label_210 = QtWidgets.QLabel(self.frame_pin_4)
+        self.label_210 = QtWidgets.QLabel(self.frame_pin_5)
         self.label_210.setGeometry(QtCore.QRect(70, 70, 51, 17))
         self.label_210.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_210.setObjectName("label_210")
-        self.progressBar_pin_5_n = QtWidgets.QProgressBar(self.frame_pin_4)
+        self.progressBar_pin_5_n = QtWidgets.QProgressBar(self.frame_pin_5)
         self.progressBar_pin_5_n.setGeometry(QtCore.QRect(20, 100, 141, 31))
         font = QtGui.QFont()
         font.setBold(True)
@@ -706,7 +706,7 @@ class Ui_MainWindow(object):
         self.progressBar_pin_5_n.setProperty("value", 24)
         self.progressBar_pin_5_n.setTextVisible(False)
         self.progressBar_pin_5_n.setObjectName("progressBar_pin_5_n")
-        self.label_211 = QtWidgets.QLabel(self.frame_pin_4)
+        self.label_211 = QtWidgets.QLabel(self.frame_pin_5)
         self.label_211.setGeometry(QtCore.QRect(20, 160, 61, 17))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -714,7 +714,7 @@ class Ui_MainWindow(object):
         self.label_211.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_211.setObjectName("label_211")
-        self.label_212 = QtWidgets.QLabel(self.frame_pin_4)
+        self.label_212 = QtWidgets.QLabel(self.frame_pin_5)
         self.label_212.setGeometry(QtCore.QRect(20, 180, 81, 17))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -722,7 +722,7 @@ class Ui_MainWindow(object):
         self.label_212.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_212.setObjectName("label_212")
-        self.label_213 = QtWidgets.QLabel(self.frame_pin_4)
+        self.label_213 = QtWidgets.QLabel(self.frame_pin_5)
         self.label_213.setGeometry(QtCore.QRect(20, 200, 81, 17))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -730,7 +730,7 @@ class Ui_MainWindow(object):
         self.label_213.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_213.setObjectName("label_213")
-        self.pin_5_vol_value_n = QtWidgets.QLabel(self.frame_pin_4)
+        self.pin_5_vol_value_n = QtWidgets.QLabel(self.frame_pin_5)
         self.pin_5_vol_value_n.setGeometry(QtCore.QRect(100, 160, 31, 17))
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -740,7 +740,7 @@ class Ui_MainWindow(object):
         self.pin_5_vol_value_n.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.pin_5_vol_value_n.setObjectName("pin_5_vol_value_n")
-        self.pin_5_temp_value_n = QtWidgets.QLabel(self.frame_pin_4)
+        self.pin_5_temp_value_n = QtWidgets.QLabel(self.frame_pin_5)
         self.pin_5_temp_value_n.setGeometry(QtCore.QRect(100, 180, 31, 17))
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -750,7 +750,7 @@ class Ui_MainWindow(object):
         self.pin_5_temp_value_n.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.pin_5_temp_value_n.setObjectName("pin_5_temp_value_n")
-        self.pin_5_status_value_n = QtWidgets.QLabel(self.frame_pin_4)
+        self.pin_5_status_value_n = QtWidgets.QLabel(self.frame_pin_5)
         self.pin_5_status_value_n.setGeometry(QtCore.QRect(100, 200, 61, 17))
         font = QtGui.QFont()
         font.setPointSize(9)
@@ -760,7 +760,7 @@ class Ui_MainWindow(object):
         self.pin_5_status_value_n.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.pin_5_status_value_n.setObjectName("pin_5_status_value_n")
-        self.label_214 = QtWidgets.QLabel(self.frame_pin_4)
+        self.label_214 = QtWidgets.QLabel(self.frame_pin_5)
         self.label_214.setGeometry(QtCore.QRect(130, 160, 21, 17))
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -768,7 +768,7 @@ class Ui_MainWindow(object):
         self.label_214.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_214.setObjectName("label_214")
-        self.label_215 = QtWidgets.QLabel(self.frame_pin_4)
+        self.label_215 = QtWidgets.QLabel(self.frame_pin_5)
         self.label_215.setGeometry(QtCore.QRect(130, 180, 21, 17))
         font = QtGui.QFont()
         font.setPointSize(11)
@@ -776,7 +776,7 @@ class Ui_MainWindow(object):
         self.label_215.setStyleSheet("border: none;\n"
 "    border-radius: 0px;")
         self.label_215.setObjectName("label_215")
-        self.pushButton_5 = QtWidgets.QPushButton(self.frame_pin_4)
+        self.pushButton_5 = QtWidgets.QPushButton(self.frame_pin_5)
         self.pushButton_5.setGeometry(QtCore.QRect(190, 140, 81, 31))
         self.pushButton_5.setStyleSheet("background-color: #FF9800;\n"
 "color: white;\n"
@@ -787,10 +787,10 @@ class Ui_MainWindow(object):
 "text-align: center;\n"
 "padding: 10px;")
         self.pushButton_5.setObjectName("pushButton_5")
-        self.horizontalLayout_4.addWidget(self.frame_pin_4)
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(70, 540, 81, 31))
-        self.pushButton.setStyleSheet("background-color: #FF9800;\n"
+        self.horizontalLayout_4.addWidget(self.frame_pin_5)
+        self.replace_button_1 = QtWidgets.QPushButton(self.centralwidget)
+        self.replace_button_1.setGeometry(QtCore.QRect(70, 540, 81, 31))
+        self.replace_button_1.setStyleSheet("background-color: #FF9800;\n"
 "color: white;\n"
 "font-size: 12px;\n"
 "border-radius: 50%;\n"
@@ -798,10 +798,10 @@ class Ui_MainWindow(object):
 "height: 60px;\n"
 "text-align: center;\n"
 "padding: 10px;")
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(270, 540, 81, 31))
-        self.pushButton_2.setStyleSheet("background-color: #FF9800;\n"
+        self.replace_button_1.setObjectName("replace_button_1")
+        self.replace_button_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.replace_button_2.setGeometry(QtCore.QRect(270, 540, 81, 31))
+        self.replace_button_2.setStyleSheet("background-color: #FF9800;\n"
 "color: white;\n"
 "font-size: 12px;\n"
 "border-radius: 50%;\n"
@@ -809,10 +809,10 @@ class Ui_MainWindow(object):
 "height: 60px;\n"
 "text-align: center;\n"
 "padding: 10px;")
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(470, 540, 81, 31))
-        self.pushButton_3.setStyleSheet("background-color: #FF9800;\n"
+        self.replace_button_2.setObjectName("replace_button_2")
+        self.replace_button_3 = QtWidgets.QPushButton(self.centralwidget)
+        self.replace_button_3.setGeometry(QtCore.QRect(470, 540, 81, 31))
+        self.replace_button_3.setStyleSheet("background-color: #FF9800;\n"
 "color: white;\n"
 "font-size: 12px;\n"
 "border-radius: 50%;\n"
@@ -820,10 +820,10 @@ class Ui_MainWindow(object):
 "height: 60px;\n"
 "text-align: center;\n"
 "padding: 10px;")
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_4.setGeometry(QtCore.QRect(670, 540, 81, 31))
-        self.pushButton_4.setStyleSheet("background-color: #FF9800;\n"
+        self.replace_button_3.setObjectName("replace_button_3")
+        self.replace_button_4 = QtWidgets.QPushButton(self.centralwidget)
+        self.replace_button_4.setGeometry(QtCore.QRect(670, 540, 81, 31))
+        self.replace_button_4.setStyleSheet("background-color: #FF9800;\n"
 "color: white;\n"
 "font-size: 12px;\n"
 "border-radius: 50%;\n"
@@ -831,10 +831,10 @@ class Ui_MainWindow(object):
 "height: 60px;\n"
 "text-align: center;\n"
 "padding: 10px;")
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.pushButton_6 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_6.setGeometry(QtCore.QRect(870, 540, 81, 31))
-        self.pushButton_6.setStyleSheet("background-color: #FF9800;\n"
+        self.replace_button_4.setObjectName("replace_button_4")
+        self.replace_button_5 = QtWidgets.QPushButton(self.centralwidget)
+        self.replace_button_5.setGeometry(QtCore.QRect(870, 540, 81, 31))
+        self.replace_button_5.setStyleSheet("background-color: #FF9800;\n"
 "color: white;\n"
 "font-size: 12px;\n"
 "border-radius: 50%;\n"
@@ -842,7 +842,7 @@ class Ui_MainWindow(object):
 "height: 60px;\n"
 "text-align: center;\n"
 "padding: 10px;")
-        self.pushButton_6.setObjectName("pushButton_6")
+        self.replace_button_5.setObjectName("replace_button_5")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1024, 22))
@@ -922,18 +922,8 @@ class Ui_MainWindow(object):
         self.label_214.setText(_translate("MainWindow", "V"))
         self.label_215.setText(_translate("MainWindow", "*C"))
         self.pushButton_5.setText(_translate("MainWindow", "↩  Rút pin"))
-        self.pushButton.setText(_translate("MainWindow", "↩  Rút pin"))
-        self.pushButton_2.setText(_translate("MainWindow", "↩  Rút pin"))
-        self.pushButton_3.setText(_translate("MainWindow", "↩  Rút pin"))
-        self.pushButton_4.setText(_translate("MainWindow", "↩  Rút pin"))
-        self.pushButton_6.setText(_translate("MainWindow", "↩  Rút pin"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+        self.replace_button_1.setText(_translate("MainWindow", "↩  Rút pin"))
+        self.replace_button_2.setText(_translate("MainWindow", "↩  Rút pin"))
+        self.replace_button_3.setText(_translate("MainWindow", "↩  Rút pin"))
+        self.replace_button_4.setText(_translate("MainWindow", "↩  Rút pin"))
+        self.replace_button_5.setText(_translate("MainWindow", "↩  Rút pin"))
