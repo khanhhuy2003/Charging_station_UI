@@ -15,12 +15,12 @@ class PinModel:
             5: {"percent": 23, "voltage": 48.3, "temp": 39.5, "status": "Cảnh báo thấp"}
         }
 
-        self.status_options = [
-            ("IDLE", "🤖💤"),
-            ("WAITING", "🤖⌛"),
-            ("BUSY", "🤖🔄"),
-            ("DONE", "🤖🎉")
-        ]
+        # self.status_options = [
+        #     ("IDLE", "🤖💤"),
+        #     ("WAITING", "🤖⌛"),
+        #     ("BUSY", "🤖🔄"),
+        #     ("DONE", "🤖🎉")
+        # ]
 
     def update_pin(self, pin):
         if self.replace_pin_status[pin]:
