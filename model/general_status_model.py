@@ -6,7 +6,7 @@ class Status(Enum):
     IDLE = "🤖💤"
     WAITING = "🤖⌛"
     BUSY = "🤖🔄"
-    ERROR = "❌"
+    ERROR = "🤖❌"
     DONE = "🤖🎉"
 
 
@@ -47,6 +47,8 @@ class General_Status_Model:
     # number of pin
     def set_no_pin_value(self, value: int):
         self.no_pin_value = value
+        return self.no_pin_value
+    def get_no_pin(self):
         return self.no_pin_value
     # server connection
     def set_server_connect(self):

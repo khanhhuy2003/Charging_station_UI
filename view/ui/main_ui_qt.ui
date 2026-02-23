@@ -127,7 +127,7 @@ padding: 12px;</string>
       <rect>
        <x>780</x>
        <y>20</y>
-       <width>121</width>
+       <width>171</width>
        <height>31</height>
       </rect>
      </property>
@@ -173,7 +173,7 @@ padding: 12px;</string>
       <rect>
        <x>780</x>
        <y>60</y>
-       <width>91</width>
+       <width>201</width>
        <height>31</height>
       </rect>
      </property>
@@ -244,7 +244,7 @@ padding: 12px;</string>
       <rect>
        <x>780</x>
        <y>180</y>
-       <width>91</width>
+       <width>201</width>
        <height>31</height>
       </rect>
      </property>
@@ -270,7 +270,7 @@ padding: 12px;</string>
       <rect>
        <x>780</x>
        <y>140</y>
-       <width>91</width>
+       <width>201</width>
        <height>31</height>
       </rect>
      </property>
@@ -317,7 +317,7 @@ padding: 12px;</string>
       <rect>
        <x>780</x>
        <y>100</y>
-       <width>91</width>
+       <width>201</width>
        <height>31</height>
       </rect>
      </property>

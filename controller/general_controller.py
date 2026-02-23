@@ -10,7 +10,7 @@ class GeneralController:
         model = General_Status_Model()
 
     def update_general_status(self):
-        # 1️⃣ Update model
+        # Update model
         status = self.model.set_status_value()
         opmode = self.model.set_opmode_value()
         server = self.model.set_server_connect()
@@ -20,7 +20,12 @@ class GeneralController:
         self.ui.status_value.setText(status.name)    
         self.ui.general_status_icon.setText(status.value) 
 
-        # 3️⃣ Set color theo status
+        self.ui.server_connect.setText(server.name)   
+        self.ui.wifi_value.setText(wifi.name)   
+    
+
+
+        # Set color theo status
         if status.name in ["IDLE", "DONE"]:
             color = "#4CAF50"      # xanh lá
         elif status.name == "WAITING":
@@ -34,7 +39,7 @@ class GeneralController:
             f"border: none; border-radius: 0px; color: {color};"
         )
 
-        # 4️⃣ (OPTIONAL) Update UI khác nếu có
+        # (OPTIONAL) Update UI khác nếu có
         # ví dụ:
         # self.ui.opmode_value.setText(opmode.name)
         # self.ui.server_value.setText(server.name)

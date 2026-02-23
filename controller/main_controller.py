@@ -21,6 +21,7 @@ class MainController(QtWidgets.QMainWindow):
         # Khởi tạo các controller con
         self.pin_ctrl = PinController(self)
         self.general_ctrl = GeneralController(self)
+        self.ui.no_pin_value.setText(str(self.pin_model.active_pin_count))
 
         # Timer update toàn bộ
         self.timer = QtCore.QTimer(self)
@@ -51,6 +52,7 @@ class MainController(QtWidgets.QMainWindow):
         for pin in range(1, 6):
             self.pin_ctrl.update_pin_ui(pin)
             self.pin_model.update_pin(pin)
+        self.ui.no_pin_value.setText(str(self.pin_model.active_pin_count))
 
     def update_rut_pin_buttons_visibility(self):
         """Ẩn/hiện nút rút pin theo mode"""
